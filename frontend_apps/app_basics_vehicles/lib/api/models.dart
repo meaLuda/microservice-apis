@@ -1,5 +1,5 @@
 // models for api
-import 'dart:convert';
+// import 'dart:convert';
 
 
 class Course{
@@ -17,13 +17,13 @@ class Course{
 
 // List<Lessons> lessonsFromJson(String str) => List<Lessons>.from(json.decode(str).map((x) => Lessons.fromMap(x)));
 
-class Lessons{
+class LessonsDataModel{
   final int id;
   final String title;
   final String description;
   final int courseId;
 
-  Lessons({
+  LessonsDataModel({
     required this.id,
     required this.title,
     required this.description,
@@ -31,8 +31,8 @@ class Lessons{
   }); 
 
   // Add the factory constructor 'fromJson' here to convert JSON to Dart object.
-  factory Lessons.fromMap(Map<String, dynamic> json) {
-   return Lessons(
+  factory LessonsDataModel.fromJson(Map<String, dynamic> json) {
+   return LessonsDataModel(
     id: json['id'] as int,
     title: json['title'] as String,
     description: json['description'] as String,

@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'models.dart';
+// import 'models.dart';
 
 
 class ApiService {
@@ -30,9 +30,31 @@ class ApiService {
 
 }
 
-void TestGetData() async { 
+void TestGetData_Courses() async{
   // Add 'async' keyword here
-  final apiService = ApiService('https://4271-41-90-65-164.ngrok-free.app');
+  final apiService = ApiService('https://477e-41-90-64-234.ngrok-free.app');
+  try {
+    // final fetchedCourses = await apiService.getCourses('api/LearningAPI/v1/courses'); // Use 'await' here
+    final fetchedCourses= await apiService.getLessons('api/LearningAPI/v1/courses'); // Use 'await' here
+    print(fetchedCourses);
+    // fetchedLessons.forEach((lesson) {
+    //   print("Lesson ${lesson['id']}: ${lesson['title']}");
+    //   print("Description: ${lesson['description']}");
+    //   print("Course ID: ${lesson['course_id']}");
+    //   print("\n ------------------------------------------ \n");
+    // });
+  } catch (e) {
+    print('Error: $e');
+  }
+}
+
+
+
+
+
+void TestGetData_Lessons() async { 
+  // Add 'async' keyword here
+  final apiService = ApiService('https://477e-41-90-64-234.ngrok-free.app');
 
   try {
     // final fetchedCourses = await apiService.getCourses('api/LearningAPI/v1/courses'); // Use 'await' here
@@ -41,13 +63,13 @@ void TestGetData() async {
       print("Lesson ${lesson['id']}: ${lesson['title']}");
       print("Description: ${lesson['description']}");
       print("Course ID: ${lesson['course_id']}");
-      print("--------------------");
+      print("\n ------------------------------------------ \n");
     });
   } catch (e) {
     print('Error: $e');
   }
 }
 
-void main() {
-  TestGetData();
-}
+// void main() {
+//   TestGetData_Courses();
+// }
