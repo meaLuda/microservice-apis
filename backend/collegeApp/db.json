@@ -1,0 +1,649 @@
+[
+    {
+        "model": "college.depertment",
+        "pk": 1,
+        "fields": {
+            "title": "Electrical and Electronic Engineering Department"
+        }
+    },
+    {
+        "model": "college.depertment",
+        "pk": 2,
+        "fields": {
+            "title": "Agriculture and Aquaculture Department"
+        }
+    },
+    {
+        "model": "college.depertment",
+        "pk": 3,
+        "fields": {
+            "title": "Applied Sciences Department"
+        }
+    },
+    {
+        "model": "college.depertment",
+        "pk": 4,
+        "fields": {
+            "title": "Building and Civil Engineering Department"
+        }
+    },
+    {
+        "model": "college.depertment",
+        "pk": 5,
+        "fields": {
+            "title": "Business Studies Department"
+        }
+    },
+    {
+        "model": "college.depertment",
+        "pk": 6,
+        "fields": {
+            "title": "Clothing and Textile Department Department"
+        }
+    },
+    {
+        "model": "college.depertment",
+        "pk": 7,
+        "fields": {
+            "title": "Computer Studies/ICT Department"
+        }
+    },
+    {
+        "model": "college.depertment",
+        "pk": 8,
+        "fields": {
+            "title": "Education Department"
+        }
+    },
+    {
+        "model": "college.depertment",
+        "pk": 9,
+        "fields": {
+            "title": "Health Sciences Department"
+        }
+    },
+    {
+        "model": "college.depertment",
+        "pk": 10,
+        "fields": {
+            "title": "Hospitality Department"
+        }
+    },
+    {
+        "model": "college.depertment",
+        "pk": 11,
+        "fields": {
+            "title": "Mechanical and Automotive Engineering Department"
+        }
+    },
+    {
+        "model": "college.diploma",
+        "pk": 2,
+        "fields": {
+            "depertment": 1,
+            "title": "Diploma in Electrical and Electronic Engineering (Power option)"
+        }
+    },
+    {
+        "model": "college.diploma",
+        "pk": 3,
+        "fields": {
+            "depertment": 1,
+            "title": "Diploma in Electrical and Electronic Engineering (Telecommunication option)"
+        }
+    },
+    {
+        "model": "college.diploma",
+        "pk": 4,
+        "fields": {
+            "depertment": 1,
+            "title": "Diploma in Electrical and Electronic (Instrumentation & Control option)"
+        }
+    },
+    {
+        "model": "college.diploma",
+        "pk": 5,
+        "fields": {
+            "depertment": 2,
+            "title": "Diploma in Agriculture"
+        }
+    },
+    {
+        "model": "college.diploma",
+        "pk": 6,
+        "fields": {
+            "depertment": 2,
+            "title": "Diploma In sustainable Agriculture And Rural Development"
+        }
+    },
+    {
+        "model": "college.diploma",
+        "pk": 7,
+        "fields": {
+            "depertment": 3,
+            "title": "Diploma in Analytical Chemistry"
+        }
+    },
+    {
+        "model": "college.diploma",
+        "pk": 8,
+        "fields": {
+            "depertment": 3,
+            "title": "Diploma in Applied Biology"
+        }
+    },
+    {
+        "model": "college.diploma",
+        "pk": 9,
+        "fields": {
+            "depertment": 3,
+            "title": "Diploma in Applied statistics"
+        }
+    },
+    {
+        "model": "college.diploma",
+        "pk": 10,
+        "fields": {
+            "depertment": 3,
+            "title": "Diploma in Medical Laboratory Technology"
+        }
+    },
+    {
+        "model": "college.diploma",
+        "pk": 11,
+        "fields": {
+            "depertment": 4,
+            "title": "Diploma in Building Technology"
+        }
+    },
+    {
+        "model": "college.diploma",
+        "pk": 12,
+        "fields": {
+            "depertment": 4,
+            "title": "Diploma in Civil Engineering"
+        }
+    },
+    {
+        "model": "college.diploma",
+        "pk": 13,
+        "fields": {
+            "depertment": 4,
+            "title": "Diploma in Quantity Surveying"
+        }
+    },
+    {
+        "model": "college.diploma",
+        "pk": 14,
+        "fields": {
+            "depertment": 4,
+            "title": "Diploma in Road Transport"
+        }
+    },
+    {
+        "model": "college.diploma",
+        "pk": 15,
+        "fields": {
+            "depertment": 4,
+            "title": "Diploma in Land Surveying"
+        }
+    },
+    {
+        "model": "college.diploma",
+        "pk": 16,
+        "fields": {
+            "depertment": 4,
+            "title": "Diploma in Petroleum and Geoscience"
+        }
+    },
+    {
+        "model": "college.diploma",
+        "pk": 17,
+        "fields": {
+            "depertment": 4,
+            "title": "Diploma in Architecture"
+        }
+    },
+    {
+        "model": "college.diploma",
+        "pk": 18,
+        "fields": {
+            "depertment": 5,
+            "title": "Diploma in Business Management"
+        }
+    },
+    {
+        "model": "college.diploma",
+        "pk": 19,
+        "fields": {
+            "depertment": 5,
+            "title": "Diploma in Human Resource Management"
+        }
+    },
+    {
+        "model": "college.diploma",
+        "pk": 20,
+        "fields": {
+            "depertment": 5,
+            "title": "Diploma in Supply Chain Management"
+        }
+    },
+    {
+        "model": "college.diploma",
+        "pk": 21,
+        "fields": {
+            "depertment": 5,
+            "title": "Diploma in Sales and Marketing"
+        }
+    },
+    {
+        "model": "college.diploma",
+        "pk": 22,
+        "fields": {
+            "depertment": 5,
+            "title": "Diploma in Secretarial Studies"
+        }
+    },
+    {
+        "model": "college.diploma",
+        "pk": 23,
+        "fields": {
+            "depertment": 5,
+            "title": "Diploma in Project Management"
+        }
+    },
+    {
+        "model": "college.diploma",
+        "pk": 24,
+        "fields": {
+            "depertment": 6,
+            "title": "Diploma in Fashion Design and Clothing Technology"
+        }
+    },
+    {
+        "model": "college.diploma",
+        "pk": 25,
+        "fields": {
+            "depertment": 7,
+            "title": "Diploma in Information Communication Technology"
+        }
+    },
+    {
+        "model": "college.diploma",
+        "pk": 26,
+        "fields": {
+            "depertment": 8,
+            "title": "Diploma in Early Childhood Development and Education(ECDE)"
+        }
+    },
+    {
+        "model": "college.diploma",
+        "pk": 27,
+        "fields": {
+            "depertment": 9,
+            "title": "Diploma in Nutrition and Dietetics"
+        }
+    },
+    {
+        "model": "college.diploma",
+        "pk": 28,
+        "fields": {
+            "depertment": 10,
+            "title": "Diploma in Food and Beverage Management"
+        }
+    },
+    {
+        "model": "college.diploma",
+        "pk": 29,
+        "fields": {
+            "depertment": 10,
+            "title": "Diploma in Catering and Accommodation Managements"
+        }
+    },
+    {
+        "model": "college.diploma",
+        "pk": 30,
+        "fields": {
+            "depertment": 10,
+            "title": "Diploma in Tourism Management"
+        }
+    },
+    {
+        "model": "college.diploma",
+        "pk": 31,
+        "fields": {
+            "depertment": 10,
+            "title": "Diploma in Food Science Processing Technology"
+        }
+    },
+    {
+        "model": "college.module",
+        "pk": 1,
+        "fields": {
+            "diploma": 2,
+            "title": "Module I"
+        }
+    },
+    {
+        "model": "college.module",
+        "pk": 2,
+        "fields": {
+            "diploma": 2,
+            "title": "Module II"
+        }
+    },
+    {
+        "model": "college.module",
+        "pk": 3,
+        "fields": {
+            "diploma": 2,
+            "title": "Module III"
+        }
+    },
+    {
+        "model": "college.submodule",
+        "pk": 1,
+        "fields": {
+            "diploma": 2,
+            "module": 1,
+            "title": "Entrepreneurship education"
+        }
+    },
+    {
+        "model": "college.submodule",
+        "pk": 2,
+        "fields": {
+            "diploma": 2,
+            "module": 1,
+            "title": "Information communication technology"
+        }
+    },
+    {
+        "model": "college.submodule",
+        "pk": 3,
+        "fields": {
+            "diploma": 2,
+            "module": 1,
+            "title": "Communication skills"
+        }
+    },
+    {
+        "model": "college.submodule",
+        "pk": 4,
+        "fields": {
+            "diploma": 2,
+            "module": 1,
+            "title": "Life skills"
+        }
+    },
+    {
+        "model": "college.submodule",
+        "pk": 5,
+        "fields": {
+            "diploma": 2,
+            "module": 1,
+            "title": "Engineering mathematics I"
+        }
+    },
+    {
+        "model": "college.submodule",
+        "pk": 6,
+        "fields": {
+            "diploma": 2,
+            "module": 1,
+            "title": "Physical science"
+        }
+    },
+    {
+        "model": "college.submodule",
+        "pk": 7,
+        "fields": {
+            "diploma": 2,
+            "module": 1,
+            "title": "Mechanical science"
+        }
+    },
+    {
+        "model": "college.submodule",
+        "pk": 8,
+        "fields": {
+            "diploma": 2,
+            "module": 1,
+            "title": "Materials, processes and workshop practice"
+        }
+    },
+    {
+        "model": "college.submodule",
+        "pk": 9,
+        "fields": {
+            "diploma": 2,
+            "module": 1,
+            "title": "Engineering drawing"
+        }
+    },
+    {
+        "model": "college.submodule",
+        "pk": 10,
+        "fields": {
+            "diploma": 2,
+            "module": 1,
+            "title": "Electrical engineering principles"
+        }
+    },
+    {
+        "model": "college.submodule",
+        "pk": 11,
+        "fields": {
+            "diploma": 2,
+            "module": 1,
+            "title": "Electrical installation technology"
+        }
+    },
+    {
+        "model": "college.submodule",
+        "pk": 12,
+        "fields": {
+            "diploma": 2,
+            "module": 1,
+            "title": "Solar installation systems"
+        }
+    },
+    {
+        "model": "college.submodule",
+        "pk": 13,
+        "fields": {
+            "diploma": 2,
+            "module": 1,
+            "title": "Analogue electronics I"
+        }
+    },
+    {
+        "model": "college.submodule",
+        "pk": 14,
+        "fields": {
+            "diploma": 2,
+            "module": 1,
+            "title": "Electrical measurements and fault diagnosis"
+        }
+    },
+    {
+        "model": "college.submodule",
+        "pk": 15,
+        "fields": {
+            "diploma": 2,
+            "module": 2,
+            "title": "Control systems"
+        }
+    },
+    {
+        "model": "college.submodule",
+        "pk": 16,
+        "fields": {
+            "diploma": 2,
+            "module": 2,
+            "title": "Analogue electronics II"
+        }
+    },
+    {
+        "model": "college.submodule",
+        "pk": 17,
+        "fields": {
+            "diploma": 2,
+            "module": 2,
+            "title": "Engineering mathematics II"
+        }
+    },
+    {
+        "model": "college.submodule",
+        "pk": 18,
+        "fields": {
+            "diploma": 2,
+            "module": 2,
+            "title": "Digital electronics"
+        }
+    },
+    {
+        "model": "college.submodule",
+        "pk": 19,
+        "fields": {
+            "diploma": 2,
+            "module": 1,
+            "title": "Engineering drawing and design"
+        }
+    },
+    {
+        "model": "college.submodule",
+        "pk": 20,
+        "fields": {
+            "diploma": 2,
+            "module": 1,
+            "title": "Industrial programmable logic controllers"
+        }
+    },
+    {
+        "model": "college.submodule",
+        "pk": 21,
+        "fields": {
+            "diploma": 2,
+            "module": 2,
+            "title": "Business plan"
+        }
+    },
+    {
+        "model": "college.submodule",
+        "pk": 22,
+        "fields": {
+            "diploma": 2,
+            "module": 2,
+            "title": "Electric circuit analysis"
+        }
+    },
+    {
+        "model": "college.submodule",
+        "pk": 23,
+        "fields": {
+            "diploma": 2,
+            "module": 2,
+            "title": "Building Services and Protection"
+        }
+    },
+    {
+        "model": "college.submodule",
+        "pk": 24,
+        "fields": {
+            "diploma": 2,
+            "module": 2,
+            "title": "Electric Power Generation and Transmission"
+        }
+    },
+    {
+        "model": "college.submodule",
+        "pk": 25,
+        "fields": {
+            "diploma": 2,
+            "module": 3,
+            "title": "Engineering mathematics III"
+        }
+    },
+    {
+        "model": "college.submodule",
+        "pk": 26,
+        "fields": {
+            "diploma": 2,
+            "module": 3,
+            "title": "Micro-controller technology"
+        }
+    },
+    {
+        "model": "college.submodule",
+        "pk": 27,
+        "fields": {
+            "diploma": 2,
+            "module": 3,
+            "title": "Industrial organization and management"
+        }
+    },
+    {
+        "model": "college.submodule",
+        "pk": 28,
+        "fields": {
+            "diploma": 2,
+            "module": 3,
+            "title": "Microprocessor systems"
+        }
+    },
+    {
+        "model": "college.submodule",
+        "pk": 29,
+        "fields": {
+            "diploma": 2,
+            "module": 1,
+            "title": "Estimating, tendering and engineering services contracts"
+        }
+    },
+    {
+        "model": "college.submodule",
+        "pk": 30,
+        "fields": {
+            "diploma": 2,
+            "module": 3,
+            "title": "Trade project"
+        }
+    },
+    {
+        "model": "college.submodule",
+        "pk": 31,
+        "fields": {
+            "diploma": 2,
+            "module": 3,
+            "title": "Electromagnetic field theory"
+        }
+    },
+    {
+        "model": "college.submodule",
+        "pk": 32,
+        "fields": {
+            "diploma": 2,
+            "module": 3,
+            "title": "Machines and Utilization"
+        }
+    },
+    {
+        "model": "college.submodule",
+        "pk": 33,
+        "fields": {
+            "diploma": 2,
+            "module": 3,
+            "title": "Electrical Power Transmission and Distribution"
+        }
+    },
+    {
+        "model": "college.submodule",
+        "pk": 34,
+        "fields": {
+            "diploma": 2,
+            "module": 3,
+            "title": "Power Electronics"
+        }
+    }
+]

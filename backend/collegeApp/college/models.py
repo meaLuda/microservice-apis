@@ -59,3 +59,44 @@ class CourseContent(models.Model):
     
     class Meta:
         db_table = 'CollegeDiploma_SubmoduleContent'
+
+class CourseContentBase(models.Model):
+    diploma = models.ForeignKey(Diploma, on_delete=models.DO_NOTHING, related_name='%(class)s_diploma')
+    module = models.ForeignKey(Module, on_delete=models.DO_NOTHING, related_name='%(class)s_module')
+    sub_module = models.ForeignKey(Submodule, on_delete=models.CASCADE, related_name='%(class)s_submodule')
+
+    class Meta:
+        abstract = True
+        db_table = 'CollegeDiploma_SubmoduleContent_Base'
+
+class NoteContent(CourseContentBase):
+    title = models.CharField(max_length=100)
+    notes_pdf = models.FileField(upload_to='submodule_content_notes/', blank=True, null=True)
+    
+    def __str__(self):
+        return self.title
+    
+    class Meta:
+        db_table = 'CollegeDiploma_SubmoduleContent_notes'
+
+class QuizContent(CourseContentBase):
+    title = models.CharField(max_length=100)
+    quiz_question_pdf = models.FileField(upload_to='submodule_content_quiz_questions/', blank=True, null=True)
+
+    def __str__(self):
+        return self.title
+    
+    class Meta:
+        db_table = 'CollegeDiploma_SubmoduleContent_QuizContent'
+
+class VideoContent(CourseContentBase):
+    title = models.CharField(max_length=100)
+    video_url = models.URLField()
+    
+    def __str__(self):
+        return self.title
+    
+    class Meta:
+        db_table = 'CollegeDiploma_SubmoduleContent_VideoContent'
+
+
