@@ -7,7 +7,7 @@ import (
 
 func Test_db_conntection_getCourses() {
 	// Test connection result
-	courses, err_ := models.GetDepertments()
+	courses, err_ := models.GetDiplomaModule(32)
 
 	checkErr(err_)
 
