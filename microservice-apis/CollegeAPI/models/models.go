@@ -81,11 +81,46 @@ func GetDiplomaModule(diploma_id int) ([]CollegeModuleFields, error) {
 	return modules, err
 }
 
-func GetDiplomaSubModule(diploma_id int, module_id int) ([]CollegeSubmoduleFields, error) {
+func GetDiplomaSubModule_ModeID(diploma_id int, module_id int) ([]CollegeSubmoduleFields, error) {
 	//query db
 	// SELECT * FROM "CollegeDiploma_Submodule"
 	// WHERE   diploma_id=32 AND module_id=4;
 	rows, err := DB.Query("SELECT * FROM CollegeDiploma_Submodule WHERE diploma_id="+strconv.Itoa(diploma_id)+" AND module_id="+strconv.Itoa(module_id)+";")
+	if err != nil {
+		return nil, err
+	}
+
+	defer rows.Close()
+
+	subModule := make([]CollegeSubmoduleFields, 0)
+
+	for rows.Next() {
+		// create instances to be appended
+		singleSubModule := CollegeSubmoduleFields{}
+		err = rows.Scan(&singleSubModule.ID, &singleSubModule.Title, &singleSubModule.DiplomaID,&singleSubModule.ModuleID)
+
+		if err != nil {
+			return nil, err
+		}
+
+		subModule = append(subModule, singleSubModule)
+	}
+
+	err = rows.Err()
+
+	if err != nil {
+		return nil, err
+	}
+
+	return subModule, err
+
+}
+
+func GetDiplomaSubModule(diploma_id int) ([]CollegeSubmoduleFields, error) {
+	//query db
+	// SELECT * FROM "CollegeDiploma_Submodule"
+	// WHERE   diploma_id=32 AND module_id=4;
+	rows, err := DB.Query("SELECT * FROM CollegeDiploma_Submodule WHERE diploma_id="+strconv.Itoa(diploma_id)+";")
 	if err != nil {
 		return nil, err
 	}
