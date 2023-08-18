@@ -31,7 +31,7 @@ var (
 )
 
 func ConnectDb() error {
-	dbMutex.Lock()
+	dbMutex.Lock() // lock on call
 	defer dbMutex.Unlock()
 
 	if DB != nil {
