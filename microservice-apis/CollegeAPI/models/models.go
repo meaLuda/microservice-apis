@@ -30,11 +30,10 @@ type CollegeSubmoduleFields struct {
 	DiplomaID int    `json:"diploma_id"`
 }
 
-type CollegeCourseContentFields struct {
+type CollegeCourseContentNotesFields struct {
 	ID          int    `json:"id"`
 	Title       string `json:"title"`
-	Image       string `json:"image"`
-	ExamPDF     string `json:"exam_pdf"`
+	NotesPdf    string `json:"notes_pdf"`
 	DiplomaID   int    `json:"diploma_id"`
 	ModuleID    int    `json:"module_id"`
 	SubModuleID int    `json:"sub_module_id"`
@@ -149,4 +148,41 @@ func GetDiplomaSubModule(diploma_id int) ([]CollegeSubmoduleFields, error) {
 
 	return subModule, err
 
+}
+
+
+func GetDiplomaSubModuleContent(diploma_id int,module_id int, sub_module_id int)([]CollegeCourseContentNotesFields, error){
+
+	//query db
+	// SELECT * FROM "CollegeDiploma_SubmoduleContent_notes"
+	// WHERE   diploma_id=32 AND module_id=4 AND sub_module_id=35;
+
+	rows, err := DB.Query("SELECT * FROM CollegeDiploma_SubmoduleContent_notes WHERE diploma_id=%s",strconv.Itoa(diploma_id)+" AND module_id=%s",strconv.Itoa(module_id)+" AND sub_module_id=%s",strconv.Itoa(sub_module_id)+";")
+	if err != nil {
+		return nil, err
+	}
+
+	defer rows.Close()
+
+	SubModulenotes := make([]CollegeCourseContentNotesFields, 0)
+
+	for rows.Next() {
+		// create instances to be appended
+		singleSubModuleNote := CollegeCourseContentNotesFields{}
+		err = rows.Scan(&singleSubModuleNote.ID, &singleSubModuleNote.Title, &singleSubModuleNote.NotesPdf,&singleSubModuleNote.DiplomaID,&singleSubModuleNote.ModuleID,&singleSubModuleNote.SubModuleID)
+
+		if err != nil {
+			return nil, err
+		}
+
+		SubModulenotes = append(SubModulenotes, singleSubModuleNote)
+	}
+
+	err = rows.Err()
+
+	if err != nil {
+		return nil, err
+	}
+
+	return subModule, err
 }

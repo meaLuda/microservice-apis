@@ -26,4 +26,4 @@ WHERE   diploma_id=32 AND module_id=4;
 
 -- get notes
 SELECT * FROM "CollegeDiploma_SubmoduleContent_notes"
-WHERE   diploma_id=32 AND module_id=4;
+WHERE   diploma_id=32 AND module_id=4 AND sub_module_id=35;
