@@ -151,13 +151,13 @@ func GetDiplomaSubModule(diploma_id int) ([]CollegeSubmoduleFields, error) {
 }
 
 
-func GetDiplomaSubModuleContent(diploma_id int,module_id int, sub_module_id int)([]CollegeCourseContentNotesFields, error){
+func GetDiplomaSubModuleNotes(diploma_id int,module_id int, sub_module_id int)([]CollegeCourseContentNotesFields, error){
 
 	//query db
 	// SELECT * FROM "CollegeDiploma_SubmoduleContent_notes"
 	// WHERE   diploma_id=32 AND module_id=4 AND sub_module_id=35;
 
-	rows, err := DB.Query("SELECT * FROM CollegeDiploma_SubmoduleContent_notes WHERE diploma_id=%s",strconv.Itoa(diploma_id)+" AND module_id=%s",strconv.Itoa(module_id)+" AND sub_module_id=%s",strconv.Itoa(sub_module_id)+";")
+	rows, err := DB.Query("SELECT * FROM CollegeDiploma_SubmoduleContent_notes WHERE diploma_id="+strconv.Itoa(diploma_id)+" AND module_id="+strconv.Itoa(module_id)+" AND sub_module_id="+strconv.Itoa(sub_module_id)+";")
 	if err != nil {
 		return nil, err
 	}
@@ -184,5 +184,5 @@ func GetDiplomaSubModuleContent(diploma_id int,module_id int, sub_module_id int)
 		return nil, err
 	}
 
-	return subModule, err
+	return SubModulenotes, err
 }
