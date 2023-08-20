@@ -32,6 +32,9 @@ dependencies:
     sdk: flutter
   http: ^1.1.0
   syncfusion_flutter_pdfviewer: ^22.2.9
+  shared_preferences: ^2.2.0
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.3.2
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -90,3 +93,13 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: false
+  image_path: "assets/icons/nurse.png"
+  min_sdk_android: 19 # android min sdk min:16, default 21
+
+flutter_native_splash:
+  color: "#42a5f5"
+  background_image: assets/openin_img/openingNursing.png
