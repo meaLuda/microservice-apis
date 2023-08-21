@@ -15,11 +15,11 @@ void main() {
 }
 
 
-
 // Store data in list on first call
 List<dynamic> allModules = [];
 List<dynamic> allSubModules = [];
 List<dynamic> allNotes = [];
+final apiService = ApiService('https://161c-41-90-66-51.ngrok-free.app');
 
 
 
@@ -55,7 +55,6 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   // instatiate API class
-  final apiService = ApiService('https://df34-41-90-66-51.ngrok-free.app');
 
   
 
@@ -73,8 +72,9 @@ class _MyHomePageState extends State<MyHomePage> {
         // call API > CACHE DATA
         final List<dynamic> responseData = await apiService.getLessons('api/college_app/v1/all_modules/32');
         await cacheData(CourseModules,responseData);
+        final cachedNewData = await getCachedData(CourseModules);
         print("-----------------Cached data and returned from api--------------------");
-        return cachedData;
+        return cachedNewData;
       }
     }catch (e) {
       return [];
@@ -187,7 +187,7 @@ class CourseDetailsPage extends StatefulWidget {
 class _CourseDetailsPage extends State<CourseDetailsPage> {
 
   // make an api call
-  final apiService = ApiService('https://df34-41-90-66-51.ngrok-free.app');
+  // final apiService = ApiService('https://df34-41-90-66-51.ngrok-free.app');
 
   Future<List<dynamic>> fetchData(String title) async {
     // try fetch data from cache first
@@ -203,8 +203,9 @@ class _CourseDetailsPage extends State<CourseDetailsPage> {
       // call API > CACHE DATA
       final List<dynamic> responseData = await apiService.getLessons("api/college_app/v1/sub_modules/with_module/${widget.dip_id}/${widget.mod_id}");
       await cacheData(CourseDetails,responseData);
+      final cachedNewData = await getCachedData(CourseDetails);
       print("-----------------Cached data and returned from api--------------------");
-      return cachedData;
+      return cachedNewData;
     }
   }
 
@@ -308,18 +309,6 @@ class CourseNotesPage extends StatefulWidget{
 
 
 class _CourseNotesPage extends State<CourseNotesPage>{
-  // make an api call
-  final apiService = ApiService('https://df34-41-90-66-51.ngrok-free.app');
-
-  // Future<List<dynamic>> fetchData() async {
-  //   try {
-  //     final List<dynamic> responseData = await apiService.getLessons("api/college_app/v1/sub_modules/notes/${widget.dip_id}/${widget.mod_id}/${widget.sub_mod_id}");
-  //     return responseData;
-  //   } catch (e) {
-  //     // print('Error: $e');
-  //     return []; // Return an empty list in case of error
-  //   }
-  // }
 
   Future<List<dynamic>> fetchData(String title) async {
     // try fetch data from cache first
@@ -335,8 +324,9 @@ class _CourseNotesPage extends State<CourseNotesPage>{
       // call API > CACHE DATA
       final List<dynamic> responseData = await apiService.getLessons("api/college_app/v1/sub_modules/notes/${widget.dip_id}/${widget.mod_id}/${widget.sub_mod_id}");
       await cacheData(CourseNotes,responseData);
+      final cachedNewData = await getCachedData(CourseNotes);
       print("-----------------Cached data and returned from api--------------------");
-      return cachedData;
+      return cachedNewData;
     }
   }
 
