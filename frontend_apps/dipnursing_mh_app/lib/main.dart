@@ -3,7 +3,6 @@ import 'api/handler.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:loading_animation_widget/loading_animation_widget.dart';
-import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 // locals
 import 'pdf_page.dart';
@@ -17,7 +16,7 @@ void main() {
 List<dynamic> allModules = [];
 List<dynamic> allSubModules = [];
 List<dynamic> allNotes = [];
-final apiService = ApiService('https://161c-41-90-66-51.ngrok-free.app');
+final apiService = ApiService('https://ea13-41-90-65-106.ngrok-free.app');
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -33,7 +32,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const MyHomePage(
-          title: ' 👩🏿‍⚕️ Nursing Diploma Mental Health 👨🏿‍⚕️'),
+          title: ' 👩🏿‍⚕️ Nursing Notes-KRCHN 👨🏿‍⚕️'),
       debugShowCheckedModeBanner: false,
     );
   }

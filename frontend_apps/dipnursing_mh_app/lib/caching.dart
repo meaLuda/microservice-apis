@@ -27,14 +27,15 @@ Future<List<dynamic>> getCachedData(String dataName) async {
     final decodedData = json.decode(cachedData);
     //print("---------------- decoded data -----------------------");
     final cachedTimestamp = DateTime.parse(decodedData['timestamp']);
-    final cachedDataData = decodedData['data'];
+    // final cachedDataData = decodedData['data'];
     //print(cachedDataData);
 
-    // final currentTime = DateTime.now();
-    // final difference = currentTime.difference(cachedTimestamp).inMinutes;
-    // Cache is valid for 60 minutes
-    // this should now be a list of dynamic
-    finalData = decodedData['data'];
+    final currentTime = DateTime.now();
+    final difference = currentTime.difference(cachedTimestamp).inMinutes;
+    // Cache is valid for 30 minutes
+    if( difference < 30){
+      finalData = decodedData['data'];
+    }
     //print("changed final data");
   }
   //print("--------- returned ${finalData}");
